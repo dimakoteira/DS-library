@@ -4,7 +4,7 @@
 using namespace std;
 template<class T>
 class clsMyQueue {
-private:
+protected:
 	clsDbLinkedList<T> dll;
 public:
 	void push(T data)
