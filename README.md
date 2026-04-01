@@ -1,54 +1,66 @@
-Data Structures Library (C++)
-A robust, template-based C++ library providing fundamental data structures implemented from scratch using Object-Oriented Programming (OOP) principles. This project was developed as part of my deep dive into Memory Management and Algorithm Optimization.
+📚 Data Structures C++ Library
+A robust, template-based C++ library providing fundamental data structures implemented from scratch. This project showcases deep proficiency in Object-Oriented Programming (OOP), Manual Memory Management, and Generic Programming.
 
-🚀 Features
-Generic Programming: All structures use templates <T> to support any data type.
+Note: This library offers dual implementations for linear structures (Linked-List based vs. Array based), allowing for performance comparisons in memory allocation and access time.
 
-Memory Efficiency: Manual memory management with proper allocation and deallocation (destructors/clear methods).
+🚀 Key Features
+Generic Programming: Full support for templates (template <typename T>).
 
-OOP Design: Clean encapsulation and modularity.
+Memory Efficiency: Strict manual memory management with proper destructors and clear() methods to prevent memory leaks.
 
-🛠 Included Libraries
-1. Doubly Linked List (clsDbLinkedList.h)
-A bidirectional list that allows traversal in both directions.
+Modular Architecture: High reusability by building complex structures (Queues/Stacks) on top of base containers (Arrays/Lists).
 
-Key Operations: InsertAtBeginning, InsertAtEnd, InsertAfter, DeleteNode, Reverse, and Find.
+🛠 Included Structures
+1. Dynamic Array (clsDynamicArray.h)
+A custom implementation of a resizable array.
 
-Advanced: Includes index-based access (getItem, updateItem) and error handling.
+Operations: resize, InsertAtEnd, InsertAtBeginning, InsertBefore/After, deleteItemAt, reverse, and find.
 
-2. Queue (clsMyQueue.h)
-A FIFO (First-In-First-Out) container implemented using the Doubly Linked List.
+Focus: Direct memory allocation using new[] and delete[].
 
-Key Operations: push (enqueue), pop (dequeue), front, back, and isEmpty.
+2. Doubly Linked List (clsDbLinkedList.h)
+A bidirectional list allowing efficient traversal and node manipulation.
 
-3. Stack (clsMyStack.h)
-A LIFO (Last-In-First-Out) container (Implemented using the same core DLL logic by inherenting clsMyQueue).
+Operations: InsertAtBeginning/End, DeleteNode, Reverse, and Find.
 
-Key Operations: push, pop, top, and size.
+Advanced: Includes index-based access (getItem, updateItem) with exception handling.
+
+3. Queue Implementations (FIFO)
+clsMyQueue.h: Implemented using Doubly Linked List logic.
+
+clsQueueArr.h: Implemented using the Dynamic Array (Composition-based).
+
+Showcases how to wrap a raw array into a Queue structure.
+
+4. Stack Implementation (LIFO)
+clsMyStack.h: Inherits from clsMyQueue to demonstrate Inheritance and Code Reuse in OOP.
 
 💻 How to Use
-Simply include the header files in your project:
+Simply include the required header from the ../includes/ folder.
 
 C++
-#include "includes/clsDbLinkedList.h"
-#include "includes/clsMyQueue.h"
-#include "includes/clsMyStack.h"
+#include "../includes/clsQueueArr.h"
 
 int main() {
-    clsMyQueue<int> Q;
-    Q.push(10);
-    Q.push(20);
-    Q.pop(); 
-    Q.print(); 
+    clsQueueArr<int> myQueue;
+    
+    myQueue.push(10);
+    myQueue.push(20);
+    myQueue.push(30);
+    
+    myQueue.pop(); // Deletes 10
+    myQueue.print(); // Output: 20 30
+    
     return 0;
 }
+🧠 Skills Demonstrated
+Pointer Manipulation: Handling complex pointers for linked lists.
 
-Pointer Manipulation
+Memory Management: Managing dynamic arrays and avoiding leaks.
 
-Dynamic Memory Management
+Composition vs. Inheritance: Using the right OOP pattern for each structure.
 
-Data Structure Implementation (FIFO/LIFO)
-
+Unit Testing: Rigorous testing of edge cases (Empty structures, Out-of-range access).
 👤 Author
 Dima Koteira Information Engineering Student at University of Homs
 [linkedIn profile](https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact_info%3Bj6PqA2HMQqyqgU1PoQVl7w%3D%3D)
