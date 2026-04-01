@@ -128,12 +128,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DSprojects.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="includes\clsDbLinkedList.h" />
+    <ClInclude Include="includes\clsDynamicArray.h" />
     <ClInclude Include="includes\clsMyQueue.h" />
     <ClInclude Include="includes\clsMyStack.h" />
+    <ClInclude Include="includes\clsQueueArr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DSprojects.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
