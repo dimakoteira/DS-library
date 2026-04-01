@@ -1,7 +1,7 @@
 #include <iostream>
-#include"clsDbLinkedList.h"
-#include"clsMyQueue.h";
-#include"clsMyStack.h";
+#include"includes/clsDbLinkedList.h"
+#include"includes/clsMyQueue.h";
+#include"includes/clsMyStack.h";
 using namespace std;
 
 int main()

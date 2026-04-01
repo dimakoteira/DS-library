@@ -23,13 +23,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clsDbLinkedList.h">
-      <Filter>Header Files\DS</Filter>
+    <ClInclude Include="includes\clsDbLinkedList.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="clsMyQueue.h">
-      <Filter>Header Files\DS</Filter>
+    <ClInclude Include="includes\clsMyQueue.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="clsMyStack.h">
+    <ClInclude Include="includes\clsMyStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

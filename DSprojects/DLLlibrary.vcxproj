@@ -131,9 +131,9 @@
     <ClCompile Include="DSprojects.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clsDbLinkedList.h" />
-    <ClInclude Include="clsMyQueue.h" />
-    <ClInclude Include="clsMyStack.h" />
+    <ClInclude Include="includes\clsDbLinkedList.h" />
+    <ClInclude Include="includes\clsMyQueue.h" />
+    <ClInclude Include="includes\clsMyStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
