@@ -30,9 +30,9 @@ Key Operations: push, pop, top, and size.
 Simply include the header files in your project:
 
 C++
-#include "clsDbLinkedList.h"
-#include "clsMyQueue.h"
-#include "clsMyStack.h"
+#include "includes/clsDbLinkedList.h"
+#include "includes/clsMyQueue.h"
+#include "includes/clsMyStack.h"
 
 int main() {
     clsMyQueue<int> Q;
@@ -42,8 +42,6 @@ int main() {
     Q.print(); 
     return 0;
 }
-📈 Technical Skills Demonstrated
-C++ Templates
 
 Pointer Manipulation
 
