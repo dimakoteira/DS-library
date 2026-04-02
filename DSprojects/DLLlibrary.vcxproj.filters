@@ -33,6 +33,9 @@
     <ClInclude Include="includes\clsQueueArr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="includes\clsStackArr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DSprojects.cpp">

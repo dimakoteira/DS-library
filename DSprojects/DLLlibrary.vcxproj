@@ -133,6 +133,7 @@
     <ClInclude Include="includes\clsMyQueue.h" />
     <ClInclude Include="includes\clsMyStack.h" />
     <ClInclude Include="includes\clsQueueArr.h" />
+    <ClInclude Include="includes\clsStackArr.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DSprojects.cpp" />

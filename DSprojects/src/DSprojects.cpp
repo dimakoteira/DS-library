@@ -4,6 +4,7 @@
 #include"../includes/clsMyStack.h";
 #include"../includes/clsDynamicArray.h"
 #include"../includes/clsQueueArr.h"
+#include"../includes/clsStackArr.h"
 using namespace std;
 
 void printSeparator(string testName) {
@@ -407,6 +408,92 @@ void testQueueBasedArr()
 
 
 }
+
+void testStackBasedArr()
+{
+
+    cout << "\t\t\t==============================================" << endl;
+    cout << "\t\t\t\t stack based on dynamic array" << endl;
+    cout << "\t\t\t==============================================" << endl;
+
+    // ─── Push & Basic Info ───────────────────────────────
+    printSeparator("Push & Size");
+    clsStackArr<int> myStack;
+    myStack.push(10);
+    myStack.push(20);
+    myStack.push(30);
+    myStack.push(40);
+
+    cout << "Stack after pushing 10, 20, 30, 40:\n";
+    myStack.print();
+    cout << "Size: " << myStack.size() << "\n";      // expected: 4
+    cout << "isEmpty: " << myStack.isEmpty() << "\n"; // expected: 0 (false)
+
+    // ─── Top & Bottom ─────────────────────────────────────
+    printSeparator("Top & Bottom");
+    cout << "Top item: " << myStack.top() << "\n";   // expected: 40
+    cout << "Bottom item: " << myStack.bottom() << "\n"; // expected: 10
+
+    // ─── Pop Operations ───────────────────────────────────
+    printSeparator("Pop (Delete Top)");
+    myStack.pop();
+    cout << "Stack after pop:\n";
+    myStack.print(); // expected: 30 20 10
+    cout << "New Top: " << myStack.top() << "\n"; // expected: 30
+
+    // ─── Get & Update Item ────────────────────────────────
+    printSeparator("Get & Update by Index");
+    cout << "Item at index 1: " << myStack.getItem(1) << "\n"; // expected: 20
+    myStack.updateItem(1, 99);
+    cout << "After updating index 1 to 99:\n";
+    myStack.print(); // expected: 30 99 10
+
+    // ─── Advanced Insertions ──────────────────────────────
+    printSeparator("Insert After / Top / Bottom");
+    myStack.InsertAfter(0, 25); // Insert 25 after index 0 (top item 30)
+    cout << "After InsertAfter(0, 25):\n";
+    myStack.print(); // expected: 30 25 99 10
+
+    // Insert at top (push-like but explicit) and at bottom
+    myStack.InsertAtFront(5);
+    cout << "After InsertAtTop(5):\n";
+    myStack.print(); // expected: 5 30 25 99 10
+
+    myStack.InsertAtBack(100);
+    cout << "After InsertAtBottom(100):\n";
+    myStack.print(); // expected: 5 30 25 99 10 100
+
+    // ─── Reverse ──────────────────────────────────────────
+    printSeparator("Reverse Stack");
+    myStack.reverse();
+    cout << "Stack after reverse:\n";
+    myStack.print(); // expected: 100 10 99 25 30 5
+
+    // ─── Clear & Empty State ──────────────────────────────
+    printSeparator("Clear & Empty State");
+    myStack.clear();
+    cout << "Size after clear: " << myStack.size() << "\n";      // expected: 0
+    cout << "isEmpty after clear: " << myStack.isEmpty() << "\n"; // expected: 1
+    myStack.print(); // expected: (empty line)
+
+    // ─── Template Test with Strings ───────────────────────
+    printSeparator("Template test - String Stack");
+    clsStackArr<string> sStack;
+    sStack.push("Dima");
+    sStack.push("Programming");
+    sStack.push("C++");
+
+    cout << "String Stack:\n";
+    sStack.print(); // expected: C++ Programming Dima (depending on print order)
+    cout << "Top: " << sStack.top() << "\n"; // expected: C++
+
+    sStack.pop();
+    cout << "After pop:\n";
+    sStack.print(); // expected: Programming Dima
+
+    cout << "\n========== All Stack Tests Done ==========\n";
+}
+
     int main()
 {
     //testing clsDbLinkedList.h
@@ -423,4 +510,7 @@ void testQueueBasedArr()
     
     //test queue based array
    // testQueueBasedArr();
+
+   //testing stack based array
+   testStackBasedArr();
 }
